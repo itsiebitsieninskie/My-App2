@@ -25,13 +25,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const WelcomePage(),
+      home: const LoginPage(),
     );
   }
 }
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,18 +51,18 @@ class WelcomePage extends StatelessWidget {
                   Text(
                     'Welcome to Exa',
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 28,
-                          color: Colors.black,
-                        ),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 28,
+                      color: Colors.black,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     'A Digital World Symbolizing Change',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: 16,
-                          color: Colors.grey[700],
-                        ),
+                      fontSize: 16,
+                      color: Colors.grey[700],
+                    ),
                   ),
                 ],
               ),
