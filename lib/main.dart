@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/login_page.dart';
-
-class Country {
-  final String name;
-  final String code;
-  final String dialCode;
-
-  Country({required this.name, required this.code, required this.dialCode});
-}
+import 'pages/welcome_page.dart'; // Import your welcome page
 
 void main() => runApp(const MyApp());
 
@@ -17,14 +9,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login Screen',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Inter',
+        primaryColor: const Color(0xFF2563EB),
         inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          filled: true,
+          fillColor: const Color(0xFFF3F4F6),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 14,
+          ),
         ),
       ),
-      home: const LoginScreen(),
+      home: const LoginPage(), // Or WelcomePage if you rename it
     );
   }
 }
